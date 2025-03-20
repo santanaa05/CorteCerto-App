@@ -1,9 +1,13 @@
 // Importação dos módulos necessários do React e React Native
 import React from "react"; // Importa o React, necessário para criar componentes
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native"; // Importa componentes do React Native para construir a UI
+import { useRouter } from "expo-router"; // Importação do expo-router
+import { Ionicons } from "@expo/vector-icons"; // Importa os ícones da biblioteca Ionicons
 
 // Definindo o componente funcional LoginScreen com tipagem TypeScript (React.FC)
 const LoginScreen: React.FC = () => {
+  const router = useRouter(); // Importação do expo-router
+
   return (
     // O componente View é usado para criar o layout, o contêiner principal da tela
     <View style={styles.container}>
@@ -17,7 +21,7 @@ const LoginScreen: React.FC = () => {
       <Text style={styles.subtitle}>Agende online, confira preços, receba notificações e muito mais...</Text>
       
       {/* Botão para continuar com e-mail ou telefone */}
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/login/LoginScreen")}>
         <Text style={styles.buttonText}>Continuar com email ou telefone</Text>
       </TouchableOpacity>
       
