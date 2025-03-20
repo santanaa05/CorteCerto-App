@@ -77,11 +77,7 @@ const styles = StyleSheet.create({
     marginVertical: 16, // Espaço entre os botões
   },
   googleButton: {
-<<<<<<< HEAD
-    backgroundColor: "#1E90FF",
-=======
     backgroundColor: "#00223D", // Cor de fundo específica para o botão do Google
->>>>>>> 2dd7a26e849f3191d3a99a31e49d49198b133c2f
   },
   buttonText: {
     color: "#A6A6A6", // Cor do texto do botão
