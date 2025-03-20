@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   googleButton: {
-    backgroundColor: "#db4437",
+    backgroundColor: "#1E90FF",
   },
   buttonText: {
     color: "white",
