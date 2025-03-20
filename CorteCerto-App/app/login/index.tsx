@@ -43,10 +43,10 @@ const LoginScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1, // Preenche toda a tela
-    justifyContent: "center", // Centraliza os itens verticalmente
+    justifyContent: "flex-start", // Alinha os itens no topo da tela
     alignItems: "center", // Centraliza os itens horizontalmente
     backgroundColor: "#fff", // Cor de fundo da tela
-    paddingHorizontal: 20, // Padding nas laterais
+    paddingHorizontal: 25, // Padding nas laterais
   },
   logo: {
     width: 250, // Largura da imagem
@@ -55,9 +55,10 @@ const styles = StyleSheet.create({
     marginBottom: -35, // Desloca a imagem para cima para alinhar melhor o layout
   },
   title: {
-    fontSize: 18, // Tamanho da fonte
+    fontSize: 28, // Tamanho da fonte
     fontWeight: "bold", // Peso da fonte (negrito)
     marginBottom: 15, // Margem inferior
+    color: "#00223D", // Cor do texto
     textAlign: "center", // Alinha o texto no centro
   },
   subtitle: {
@@ -65,27 +66,27 @@ const styles = StyleSheet.create({
     color: "gray", // Cor do texto
     textAlign: "center", // Alinha o texto no centro
     marginBottom: 20, // Margem inferior
+    fontWeight: "bold", // Texto em negrito
   },
   button: {
     width: "100%", // O botão ocupa toda a largura disponível
-    padding: 15, // Padding interno do botão
+    padding: 11, // Padding interno do botão
     backgroundColor: "#00223D", // Cor de fundo padrão do botão
     alignItems: "center", // Centraliza o texto dentro do botão
     borderRadius: 5, // Bordas arredondadas
-    marginVertical: 5, // Espaço entre os botões
+    marginVertical: 15, // Espaço entre os botões
   },
   googleButton: {
     backgroundColor: "#00223D", // Cor de fundo específica para o botão do Google
   },
   buttonText: {
-    color: "white", // Cor do texto do botão
+    color: "#A6A6A6", // Cor do texto do botão
     fontSize: 16, // Tamanho da fonte
     fontWeight: "bold", // Texto em negrito
   },
   registerText: {
-    marginTop: 15, // Margem superior para separar do conteúdo anterior
-    color: "blue", // Cor do texto
-    textDecorationLine: "underline", // Deixa o texto sublinhado (para indicar um link)
+    marginTop: 10, // Margem superior para separar do conteúdo anterior
+    color: "#00223D", // Cor do texto
   },
 });
 
