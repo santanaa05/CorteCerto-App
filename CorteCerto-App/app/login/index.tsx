@@ -52,10 +52,10 @@ const styles = StyleSheet.create({
     width: 250, // Largura da imagem
     height: 250, // Altura da imagem
     resizeMode: "contain", // Ajusta a imagem dentro do container sem distorcer
-    marginBottom: -35, // Desloca a imagem para cima para alinhar melhor o layout
+    marginBottom: -45, // Desloca a imagem para cima para alinhar melhor o layout
   },
   title: {
-    fontSize: 28, // Tamanho da fonte
+    fontSize: 30, // Tamanho da fonte
     fontWeight: "bold", // Peso da fonte (negrito)
     marginBottom: 15, // Margem inferior
     color: "#00223D", // Cor do texto
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     fontSize: 14, // Tamanho da fonte
     color: "gray", // Cor do texto
     textAlign: "center", // Alinha o texto no centro
-    marginBottom: 20, // Margem inferior
+    marginBottom: 25, // Margem inferior
     fontWeight: "bold", // Texto em negrito
   },
   button: {
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#00223D", // Cor de fundo padrão do botão
     alignItems: "center", // Centraliza o texto dentro do botão
     borderRadius: 5, // Bordas arredondadas
-    marginVertical: 15, // Espaço entre os botões
+    marginVertical: 16, // Espaço entre os botões
   },
   googleButton: {
     backgroundColor: "#00223D", // Cor de fundo específica para o botão do Google
