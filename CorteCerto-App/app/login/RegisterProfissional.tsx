@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; // Importa o React para criar componentes
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native"; // Importa os componentes básicos do React Native para a interface do usuário.
 import { useRouter } from "expo-router"; // Importa o hook useRouter do expo-router para navegação entre telas.
 import { Controller, useForm, SubmitHandler } from "react-hook-form"; // Importa os hooks e componentes do react-hook-form para controle de formulários.
