@@ -5,9 +5,9 @@ import { useRouter } from "expo-router"; // Importação do expo-router
 import { Ionicons } from '@expo/vector-icons'; // Importa os ícones da biblioteca Ionicons
 
 // Definindo o componente funcional RecuperarSenha com tipagem TypeScript (React.FC)
-const RecuperarSenha: React.FC = () => {
+const RecuperarSenhaProfissional: React.FC = () => {
     const router = useRouter(); // Importação do expo-router   
-
+    
   return (
     // O componente View é usado para criar o layout, o contêiner principal da tela
     <View style={styles.container}>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: "row", // Alinha os elementos na mesma linha
     alignItems: "center", // Centraliza verticalmente
-    backgroundColor: '#F0F4F8', // Cor de fundo do campo de entrada
+    backgroundColor: "#F0F4F8", // Cor de fundo do campo de entrada
     width: "100%", // Largura total
     padding: 10, // Espaçamento interno
     borderRadius: 5, // Bordas arredondadas
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     flex: 1, // Ocupa o espaço restante dentro do container
   },
   button: {
-    backgroundColor: '#007BFF', // Cor de fundo do botão
+    backgroundColor: "#00223D", // Cor de fundo do botão
     width: "100%", // Largura total
     padding: 15, // Espaçamento interno
     borderRadius: 5, // Bordas arredondadas
@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
 });
 
 // Exporta o componente RecuperarSenha como padrão para ser utilizado em outras partes do aplicativo
-export default RecuperarSenha;
+export default RecuperarSenhaProfissional;
