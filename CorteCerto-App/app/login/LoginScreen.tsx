@@ -1,10 +1,13 @@
 import React from "react"; // Importa o React para criar componentes
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from "react-native"; // Importa os componentes nativos do React Native
 import { Stack } from "expo-router"; // Importa o Stack do expo-router para navegação entre telas
+import { useRouter } from "expo-router"; // Importação do expo-router
 import { Ionicons } from "@expo/vector-icons"; // Importa os ícones da biblioteca Ionicons
 
 // Componente funcional para a tela de login
 export default function LoginScreen() {
+  const router = useRouter(); // Importação do expo-router
+
   return (
     <View style={styles.container}>
       {/* Configuração do cabeçalho da página dentro do Stack Navigator */}
@@ -31,7 +34,7 @@ export default function LoginScreen() {
       </TouchableOpacity>
 
       {/* Link para recuperação de senha */}
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => router.push("/login/RecuperarSenha")}>
         <Text style={styles.linkText}>Recuperar senha</Text>
       </TouchableOpacity>
     </View>
