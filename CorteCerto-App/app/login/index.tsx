@@ -36,7 +36,7 @@ const LoginScreen: React.FC = () => {
       </TouchableOpacity>
       
       {/* Botão para registrar um novo cadastro */}
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity onPress={() => router.push("/login/Register")}>
         <Text style={styles.registerText}>Novo cadastro</Text>
       </TouchableOpacity>
     </View>

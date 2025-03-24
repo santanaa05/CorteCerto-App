@@ -6,6 +6,8 @@ import { Ionicons } from '@expo/vector-icons'; // Importa os ícones da bibliote
 
 // Definindo o componente funcional RecuperarSenha com tipagem TypeScript (React.FC)
 const RecuperarSenha: React.FC = () => {
+    const router = useRouter(); // Importação do expo-router   
+    
   return (
     // O componente View é usado para criar o layout, o contêiner principal da tela
     <View style={styles.container}>
