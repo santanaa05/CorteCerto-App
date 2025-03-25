@@ -31,12 +31,12 @@ const LoginScreen: React.FC = () => {
       </TouchableOpacity>
       
       {/* Botão para acessar serviços para barbeiros e salões de beleza */}
-      <TouchableOpacity style={styles.button} onPress={() => router.push("/login/RegisterProfissional")}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/register/RegisterProfissional")}>
         <Text style={styles.buttonText}>Barbeiros e Salões de beleza</Text>
       </TouchableOpacity>
       
       {/* Botão para registrar um novo cadastro */}
-      <TouchableOpacity onPress={() => router.push("/login/Register")}>
+      <TouchableOpacity onPress={() => router.push("../register/RegisterScreen")}>
         <Text style={styles.registerText}>Novo cadastro</Text>
       </TouchableOpacity>
     </View>

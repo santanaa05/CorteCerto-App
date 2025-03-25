@@ -33,7 +33,7 @@ export default function SingIn() {
       </TouchableOpacity>
 
       {/* Link para criação de conta */}
-      <TouchableOpacity onPress={() => router.push("/login/RegisterProfissional")}>
+      <TouchableOpacity onPress={() => router.push("/register/RegisterProfissional")}>
         <Text style={styles.linkText}>Novo cadastro</Text>
       </TouchableOpacity>
 
