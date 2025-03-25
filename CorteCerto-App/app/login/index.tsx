@@ -21,7 +21,7 @@ const LoginScreen: React.FC = () => {
       <Text style={styles.subtitle}>Agende online, confira preços, receba notificações e muito mais...</Text>
       
       {/* Botão para continuar com e-mail ou telefone */}
-      <TouchableOpacity style={styles.button} onPress={() => router.push("/loginUser/SignInUser")}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/login/LoginScreen")}>
         <Text style={styles.buttonText}>Continuar com email ou telefone</Text>
       </TouchableOpacity>
       
