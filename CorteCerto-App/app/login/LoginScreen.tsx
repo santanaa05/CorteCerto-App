@@ -34,7 +34,7 @@ export default function SignInUser() {
       </TouchableOpacity>
 
       {/* Link para recuperação de senha */}
-      <TouchableOpacity onPress={() => router.push("/loginUser/RecuperarSenha")}>
+      <TouchableOpacity onPress={() => router.push("/login/RecuperarSenha")}>
         <Text style={styles.linkText}>Recuperar senha</Text>
       </TouchableOpacity>
     </View>
