@@ -28,7 +28,7 @@ export default function SingIn() {
       </View>
 
       {/* Botão de acesso */}
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/login/Segmentation")}>
         <Text style={styles.buttonText}>Acessar</Text>
       </TouchableOpacity>
 
@@ -78,11 +78,11 @@ const styles = StyleSheet.create({
   },
   button: {
     width: "100%", // O botão ocupa toda a largura disponível
-    padding: 12, // Adiciona espaçamento interno
-    backgroundColor: "#00223D", // Define a cor azul para o botão
+    padding: 11, // Padding interno do botão
+    backgroundColor: "#00223D", // Cor de fundo padrão do botão
     alignItems: "center", // Centraliza o texto dentro do botão
-    borderRadius: 5, // Arredonda as bordas do botão
-    marginTop: 10, // Adiciona espaçamento acima do botão
+    borderRadius: 5, // Bordas arredondadas
+    marginVertical: 16, // Espaço entre os botões
   },
   buttonText: {
     color: "#FFF", // Define a cor do texto como branco

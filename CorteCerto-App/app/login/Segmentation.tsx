@@ -2,6 +2,7 @@ import React, { useState } from "react"; // Importa o React para criar component
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native"; // Importa os componentes básicos do React Native para a interface do usuário.
 import { Controller, useForm } from "react-hook-form"; // Importa os hooks e componentes do react-hook-form para controlar o formulário.
 import * as yup from "yup"; // Importa a biblioteca yup para validação de esquemas.
+import { useRouter } from "expo-router"; // Importação do expo-router
 import { yupResolver } from "@hookform/resolvers/yup"; // Importa o conector para integrar o yup com o react-hook-form.
 
 // Definição do tipo FormData para os dados do formulário
