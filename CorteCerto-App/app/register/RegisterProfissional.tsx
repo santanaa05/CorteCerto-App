@@ -114,7 +114,7 @@ const Register: React.FC = () => {
       {/* Link para acessar a tela de login */}
       <Text style={styles.loginText}>
         Já tenho uma conta.{" "}
-        <Text style={styles.link} onPress={() => router.push("/SignInProfissional/SingInProfissional")}>
+        <Text style={styles.link} onPress={() => router.push("/register/RegisterProfissional")}>
           Acessar agora!
         </Text>
       </Text>
