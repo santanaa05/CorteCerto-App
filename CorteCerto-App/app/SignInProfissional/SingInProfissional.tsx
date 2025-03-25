@@ -5,9 +5,8 @@ import { useRouter } from "expo-router"; // Importação do expo-router
 import { Ionicons } from "@expo/vector-icons"; // Importa os ícones da biblioteca Ionicons
 
 // Componente funcional para a tela de login
-export default function LoginScreen() {
+export default function SingIn() {
   const router = useRouter(); // Importação do expo-router
-
   return (
     <View style={styles.container}>
       {/* Configuração do cabeçalho da página dentro do Stack Navigator */}
@@ -29,12 +28,17 @@ export default function LoginScreen() {
       </View>
 
       {/* Botão de acesso */}
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/SignInProfissional/Segmentation")}>
         <Text style={styles.buttonText}>Acessar</Text>
       </TouchableOpacity>
 
+      {/* Link para criação de conta */}
+      <TouchableOpacity onPress={() => router.push("/register/RegisterProfissional")}>
+        <Text style={styles.linkText}>Novo cadastro</Text>
+      </TouchableOpacity>
+
       {/* Link para recuperação de senha */}
-      <TouchableOpacity onPress={() => router.push("/login/RecuperarSenha")}>
+      <TouchableOpacity onPress={() => router.push("/login/RecuperarSenhaProfissional")}>
         <Text style={styles.linkText}>Recuperar senha</Text>
       </TouchableOpacity>
     </View>
@@ -74,11 +78,11 @@ const styles = StyleSheet.create({
   },
   button: {
     width: "100%", // O botão ocupa toda a largura disponível
-    padding: 12, // Adiciona espaçamento interno
-    backgroundColor: "#007BFF", // Define a cor azul para o botão
+    padding: 11, // Padding interno do botão
+    backgroundColor: "#00223D", // Cor de fundo padrão do botão
     alignItems: "center", // Centraliza o texto dentro do botão
-    borderRadius: 5, // Arredonda as bordas do botão
-    marginTop: 10, // Adiciona espaçamento acima do botão
+    borderRadius: 5, // Bordas arredondadas
+    marginVertical: 16, // Espaço entre os botões
   },
   buttonText: {
     color: "#FFF", // Define a cor do texto como branco
