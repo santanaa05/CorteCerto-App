@@ -9,7 +9,7 @@ import { useRouter } from "expo-router"; // Importação do expo-router
 
 const schema = yup.object().shape({
     
-  patio: yup.string().required("O campo Pátio é obrigatório"),
+  país: yup.string().required("O campo País é obrigatório"),
   cep: yup.string().required("O campo CEP é obrigatório"),
   estado: yup.string().required("O campo Estado é obrigatório"),
   cidade: yup.string().required("O campo Cidade é obrigatório"),
@@ -19,7 +19,7 @@ const schema = yup.object().shape({
 });
 
 type FormData = {
-  patio: string;
+  país: string;
   cep: string;
   estado: string;
   cidade: string;
@@ -43,7 +43,7 @@ export default function CadastroEndereco() {
       <Text style={styles.subtitle}>Preencha os campos abaixo para seguir com seu cadastro</Text>
       
       {[
-        { name: "patio", placeholder: "Pátio" },
+        { name: "país", placeholder: "País" },
         { name: "cep", placeholder: "CEP" },
         { name: "estado", placeholder: "Estado" },
         { name: "cidade", placeholder: "Cidade" },
