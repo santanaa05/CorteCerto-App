@@ -14,7 +14,7 @@ const schema = yup.object().shape({
   senha: yup.string().min(6, "A senha deve ter pelo menos 6 caracteres").required("Senha obrigatória"), // Senha mínima de 6 caracteres e obrigatória
 });
 
-const Register = () => {
+const RegisterScreen = () => {
   // hook useRouter para navegação entre telas
   const router = useRouter();
 
@@ -194,4 +194,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Register; // Exporta o componente Register para ser utilizado em outras partes do aplicativo
+export default RegisterScreen; // Exporta o componente Register para ser utilizado em outras partes do aplicativo
