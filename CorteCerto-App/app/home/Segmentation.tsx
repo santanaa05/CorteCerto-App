@@ -114,7 +114,7 @@ const Segmentation = () => {
       {/* Exibe a mensagem de erro caso o campo "quantidadeProfissionais" não passe na validação */}
 
       {/* Botão para submeter o formulário */}
-      <TouchableOpacity style={styles.button} onPress={() => router.push("/register/RegisterEndereço")}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("../register/RegisterEndereço")}>
         <Text style={styles.buttonText}>Continuar</Text>
       </TouchableOpacity>
     </View>
