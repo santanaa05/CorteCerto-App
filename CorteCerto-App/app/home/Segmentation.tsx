@@ -1,48 +1,42 @@
-import React, { useState } from "react"; // Importa o React para criar componentes e o hook useState para gerenciar estados.
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native"; // Importa os componentes básicos do React Native para a interface do usuário.
-import { Controller, useForm } from "react-hook-form"; // Importa os hooks e componentes do react-hook-form para controlar o formulário.
-import * as yup from "yup"; // Importa a biblioteca yup para validação de esquemas.
-import { useRouter } from "expo-router"; // Importação do expo-router
-import { yupResolver } from "@hookform/resolvers/yup"; // Importa o conector para integrar o yup com o react-hook-form.
+import React, { useState } from "react";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import { Controller, useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useRouter } from "expo-router";
 
-// Definição do tipo FormData para os dados do formulário
+// Definindo o tipo dos dados do formulário
 type FormData = {
-  servico: string; // Nome do serviço
-  valor: string; // Valor do serviço
-  quantidadeProfissionais: string; // Quantidade de profissionais
+  servico: string;
+  valor: string;
+  quantidadeProfissionais: string;
 };
 
-// Definição do esquema de validação com o yup
+// Definindo o esquema de validação com yup
 const schema = yup.object().shape({
-  servico: yup.string().required("Nome do serviço é obrigatório"), // Campo "servico" é obrigatório.
-  valor: yup.string().required("Valor do serviço é obrigatório"), // Campo "valor" é obrigatório.
-  quantidadeProfissionais: yup.string().required("Selecione uma quantidade de profissionais"), // Campo "quantidadeProfissionais" é obrigatório.
+  servico: yup.string().required("Nome do serviço é obrigatório"),
+  valor: yup.string().required("Valor do serviço é obrigatório"),
+  quantidadeProfissionais: yup.string().required("Selecione uma quantidade de profissionais"),
 });
 
 const Segmentation = () => {
-  // Hook para controlar o formulário com validação usando o yup
-  const {
-    control,
-    handleSubmit, // Função para manipular o envio do formulário
-    formState: { errors }, // Obtenção dos erros de validação
-  } = useForm<FormData>({
-    resolver: yupResolver(schema), // Conecta a validação do yup com o react-hook-form
+  const { control, handleSubmit, formState: { errors } } = useForm<FormData>({
+    resolver: yupResolver(schema),
   });
 
-  const [selected, setSelected] = useState<string | null>(null); // Estado para armazenar a opção de profissionais selecionada.
+  const [selected, setSelected] = useState<string | null>(null);
+  const router = useRouter(); // Usando o router do expo-router
 
-  // Função chamada ao submeter o formulário, processando os dados coletados.
+  // Função chamada ao submeter o formulário
   const onSubmit = (data: FormData) => {
-    console.log("Dados da segmentação:", data); // Aqui, os dados do formulário podem ser enviados ou processados.
+    console.log("Dados da segmentação:", data);
+    router.push("../register/CadastroEndereco"); // Navega para a página de CadastroEndereco
   };
-    const router = useRouter(); // Importação do expo-router
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Segmentação do estabelecimento</Text>
-      {/* Título da tela */}
       <Text style={styles.subtitle}>Preencha os campos abaixo para seguir com seu cadastro</Text>
-      {/* Subtítulo explicativo */}
 
       {/* Campo para o nome do serviço */}
       <Controller
@@ -52,13 +46,12 @@ const Segmentation = () => {
           <TextInput
             style={styles.input}
             placeholder="Nome do Serviço"
-            onChangeText={onChange} // Atualiza o valor do campo
-            value={value} // Valor atual do campo
+            onChangeText={onChange}
+            value={value}
           />
         )}
       />
-      {errors.servico && <Text style={styles.error}>{errors.servico.message}</Text>} 
-      {/* Exibe a mensagem de erro caso o campo "servico" não passe na validação */}
+      {errors.servico && <Text style={styles.error}>{errors.servico.message}</Text>}
 
       {/* Campo para o valor do serviço */}
       <Controller
@@ -68,26 +61,23 @@ const Segmentation = () => {
           <TextInput
             style={styles.input}
             placeholder="Valor do serviço"
-            keyboardType="numeric" // Define o teclado como numérico para este campo
-            onChangeText={onChange} // Atualiza o valor do campo
-            value={value} // Valor atual do campo
+            keyboardType="numeric"
+            onChangeText={onChange}
+            value={value}
           />
         )}
       />
-      {errors.valor && <Text style={styles.error}>{errors.valor.message}</Text>} 
-      {/* Exibe a mensagem de erro caso o campo "valor" não passe na validação */}
+      {errors.valor && <Text style={styles.error}>{errors.valor.message}</Text>}
 
-      {/* Texto explicativo sobre a quantidade de profissionais */}
+      {/* Campo para selecionar a quantidade de profissionais */}
       <Text style={styles.label}>Quantidade de Profissionais</Text>
       <Text style={styles.description}>Selecione a quantidade de profissionais (incluindo gestores e recepcionistas)</Text>
 
-      {/* Campo para selecionar a quantidade de profissionais */}
       <Controller
         control={control}
         name="quantidadeProfissionais"
         render={({ field: { onChange } }) => (
           <View style={styles.professionalsContainer}>
-            {/* Mapeia as opções de quantidade de profissionais */}
             {[
               "1 Profissional",
               "2 a 5 Profissionais",
@@ -96,10 +86,10 @@ const Segmentation = () => {
             ].map((option) => (
               <TouchableOpacity
                 key={option}
-                style={[styles.option, selected === option && styles.selectedOption]} // Aplica a classe "selectedOption" se a opção estiver selecionada
+                style={[styles.option, selected === option && styles.selectedOption]}
                 onPress={() => {
-                  setSelected(option); // Atualiza o estado da opção selecionada
-                  onChange(option); // Atualiza o valor do campo com a opção selecionada
+                  setSelected(option);
+                  onChange(option);
                 }}
               >
                 <Text style={styles.optionText}>{option}</Text>
@@ -108,13 +98,9 @@ const Segmentation = () => {
           </View>
         )}
       />
-      {errors.quantidadeProfissionais && (
-        <Text style={styles.error}>{errors.quantidadeProfissionais.message}</Text>
-      )}
-      {/* Exibe a mensagem de erro caso o campo "quantidadeProfissionais" não passe na validação */}
+      {errors.quantidadeProfissionais && <Text style={styles.error}>{errors.quantidadeProfissionais.message}</Text>}
 
-      {/* Botão para submeter o formulário */}
-      <TouchableOpacity style={styles.button} onPress={() => router.push("../register/RegisterEndereço")}>
+      <TouchableOpacity style={styles.button} onPress={handleSubmit(onSubmit)}>
         <Text style={styles.buttonText}>Continuar</Text>
       </TouchableOpacity>
     </View>
