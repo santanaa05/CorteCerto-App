@@ -33,12 +33,13 @@ export default function CadastroEndereco() {
     resolver: yupResolver(schema),  // Integração com o esquema de validação do Yup
   });
 
+  const router = useRouter();  // Definindo o router para navegação
+
   // Função chamada ao submeter o formulário com dados válidos
   const onSubmit = (data: FormData) => {
     console.log(data);  // Exibe os dados do formulário no console
+    router.push("");  // Redireciona para a tela ComandasScreen
   };
-
-  const router = useRouter();  // Hook para navegação entre telas
 
   return (
     <View style={styles.container}>  {/* Container principal da tela */}
