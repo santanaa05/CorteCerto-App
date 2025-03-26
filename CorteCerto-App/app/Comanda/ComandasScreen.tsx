@@ -98,21 +98,79 @@ export default function ComandasScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: "#fff" },
-  title: { fontSize: 18, fontWeight: "bold", marginBottom: 10 },
-  filterContainer: { backgroundColor: "#f0f0f0", padding: 10, borderRadius: 5 },
-  datePickerContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
-  dateText: { fontSize: 16, padding: 10, backgroundColor: "#fff", borderRadius: 5 },
-  searchButton: { backgroundColor: "green", padding: 10, borderRadius: 5 },
-  searchButtonText: { color: "#fff", fontWeight: "bold" },
-  subTitle: { fontSize: 16, fontWeight: "bold", marginVertical: 10 },
-  card: { backgroundColor: "#fff", padding: 15, borderRadius: 5, marginVertical: 5, shadowColor: "#000", shadowOpacity: 0.1, shadowRadius: 5 },
-  clientName: { fontSize: 16, fontWeight: "bold" },
-  service: { color: "green", marginBottom: 5 },
-  date: { color: "gray" },
-  time: { fontSize: 14, marginVertical: 5 },
-  finalizeButton: { backgroundColor: "#001F3F", padding: 10, borderRadius: 5, alignItems: "center" },
-  finalizeButtonText: { color: "#fff", fontWeight: "bold" },
+  container: {
+ 
+    flex: 1, 
+    padding: 20, 
+    backgroundColor: "#fff" 
+},
+  title: { 
+    fontSize: 18, 
+    fontWeight: "bold", 
+    marginBottom: 10 
+},
+  filterContainer: {
+    backgroundColor: "#f0f0f0", 
+    padding: 10, 
+    borderRadius: 5 
+},
+  datePickerContainer: { 
+    flexDirection: "row", 
+    alignItems: "center", 
+    justifyContent: "space-between" 
+},
+  dateText: { 
+    fontSize: 16, 
+    padding: 10, 
+    backgroundColor: "#fff", 
+    borderRadius: 5 
+},
+  searchButton: { 
+    backgroundColor: "green", 
+    padding: 10, 
+    borderRadius: 5 
+},
+  searchButtonText: { 
+    color: "#fff", 
+    fontWeight: "bold" 
+},
+  subTitle: { 
+    fontSize: 16, 
+    fontWeight: "bold", 
+    marginVertical: 10 
+},
+  card: { 
+    backgroundColor: "#fff", 
+    padding: 15, 
+    borderRadius: 5, 
+    marginVertical: 5, 
+    shadowColor: "#000", 
+    shadowOpacity: 0.1, 
+    shadowRadius: 5 
+},
+  clientName: { 
+    fontSize: 16, 
+    fontWeight: "bold" 
+},
+  service: { 
+    color: "green", 
+    marginBottom: 5 
+},
+  date: { 
+    color: "gray" 
+},
+  time: { 
+    fontSize: 14, 
+    marginVertical: 5 
+},
+  finalizeButton: { 
+    backgroundColor: "#001F3F", 
+    padding: 10, 
+    borderRadius: 5, 
+    alignItems: "center" 
+},
+  finalizeButtonText: { 
+    color: "#fff", 
+    fontWeight: "bold" 
+ },
 });
-
-//Comanda
