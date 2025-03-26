@@ -4,7 +4,6 @@ import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Stack } from "expo-router"; // Importa o Stack do expo-router para navegação entre telas
-import { Ionicons } from "@expo/vector-icons"; // Importa os ícones da biblioteca Ionicons
 import { useRouter } from "expo-router"; // Importação do expo-router
 
 const schema = yup.object().shape({
