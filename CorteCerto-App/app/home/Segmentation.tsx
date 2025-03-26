@@ -35,6 +35,7 @@ const Segmentation = () => {
   const onSubmit = (data: FormData) => {
     console.log("Dados da segmentação:", data); // Aqui, os dados do formulário podem ser enviados ou processados.
   };
+    const router = useRouter(); // Importação do expo-router
 
   return (
     <View style={styles.container}>
@@ -113,7 +114,7 @@ const Segmentation = () => {
       {/* Exibe a mensagem de erro caso o campo "quantidadeProfissionais" não passe na validação */}
 
       {/* Botão para submeter o formulário */}
-      <TouchableOpacity style={styles.button} onPress={handleSubmit(onSubmit)}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/register/RegisterEndereço")}>
         <Text style={styles.buttonText}>Continuar</Text>
       </TouchableOpacity>
     </View>

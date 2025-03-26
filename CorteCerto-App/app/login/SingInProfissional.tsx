@@ -28,7 +28,7 @@ export default function SingIn() {
       </View>
 
       {/* Botão de acesso */}
-      <TouchableOpacity style={styles.button} onPress={() => router.push("/Home/Segmentation")}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/home/Segmentation")}>
         <Text style={styles.buttonText}>Acessar</Text>
       </TouchableOpacity>
 
