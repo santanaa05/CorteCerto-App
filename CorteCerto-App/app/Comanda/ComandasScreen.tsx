@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, FlatList } from "react-native";
+import React, { useState } from "react"; // Importa o React, necessário para criar componentes
+import { View, Text, TouchableOpacity, StyleSheet, FlatList } from "react-native"; // Importa os componentes nativos do React Native
 import DateTimePicker from "@react-native-community/datetimepicker";
 
 // Definindo o tipo de dado para "Comanda"
