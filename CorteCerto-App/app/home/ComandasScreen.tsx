@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
   // Estilo para o botão de finalizar a comanda
   finalizeButton: {
     backgroundColor: "#001F3F",  // Cor de fundo do botão de finalizar (azul escuro)
-    padding: 10,  // Padding de 10 dentro do botão
+    padding: 7,  // Padding de 10 dentro do botão
     borderRadius: 5,  // Bordas arredondadas de 5 pixels para o botão
     alignItems: "center",  // Alinha o texto do botão no centro
   },
