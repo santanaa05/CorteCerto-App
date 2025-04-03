@@ -29,7 +29,7 @@ export default function SignInUser() {
       </View>
 
       {/* Botão de acesso */}
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/login/MinhasReservas")}>
         <Text style={styles.buttonText}>Acessar</Text>
       </TouchableOpacity>
 
