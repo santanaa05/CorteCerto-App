@@ -38,7 +38,7 @@ export default function CadastroEndereco() {
   // Função chamada ao submeter o formulário com dados válidos
   const onSubmit = (data: FormData) => {
     console.log(data);  // Exibe os dados do formulário no console
-    router.push("../Comanda/ComandasScreen");  // Redireciona para a tela ComandasScreen
+    router.push("../comanda/ComandasScreen");  // Redireciona para a tela ComandasScreen
   };
 
   return (
