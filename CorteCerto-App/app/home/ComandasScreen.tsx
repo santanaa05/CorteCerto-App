@@ -144,95 +144,128 @@ export default function ComandasScreen() {
 }
 
 // Estilos para a tela
+// Definindo os estilos da aplicação com StyleSheet.create
 const styles = StyleSheet.create({
+  // Estilo para o contêiner principal da tela
   container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: "#fff",
-    paddingBottom: 60,  // Espaço extra para o menu inferior
+    flex: 1,  // Ocupa toda a altura da tela
+    padding: 20,  // Adiciona um padding de 20 em todos os lados
+    backgroundColor: "#fff",  // Cor de fundo branca para o contêiner
+    paddingBottom: 60,  // Espaço extra na parte inferior para o menu inferior
   },
+
+  // Estilo para o título da tela
   title: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 10,
+    fontSize: 18,  // Tamanho da fonte 18
+    fontWeight: "bold",  // Torna o título em negrito
+    marginBottom: 10,  // Adiciona uma margem inferior de 10 pixels
   },
+
+  // Estilo para o container do filtro de data
   filterContainer: {
-    backgroundColor: "#f0f0f0",  // Fundo do container do filtro
-    padding: 10,
-    borderRadius: 5,
+    backgroundColor: "#f0f0f0",  // Cor de fundo cinza claro para a área do filtro
+    padding: 10,  // Padding de 10 ao redor do conteúdo
+    borderRadius: 5,  // Bordas arredondadas de 5 pixels
   },
+
+  // Estilo para o contêiner dos seletores de data (início e fim)
   datePickerContainer: {
-    flexDirection: "row",  // Organiza os botões de data lado a lado
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: "row",  // Organiza os itens em uma linha (horizontalmente)
+    alignItems: "center",  // Alinha os itens verticalmente no centro
+    justifyContent: "space-between",  // Distribui os itens igualmente ao longo da linha
   },
+
+  // Estilo para os textos das datas (início e fim)
   dateText: {
-    fontSize: 16,
-    padding: 10,
+    fontSize: 16,  // Tamanho da fonte de 16
+    padding: 10,  // Padding de 10 ao redor do texto
     backgroundColor: "#fff",  // Fundo branco para os textos das datas
-    borderRadius: 5,
+    borderRadius: 5,  // Bordas arredondadas de 5 pixels para os textos das datas
   },
+
+  // Estilo para o botão de busca
   searchButton: {
-    backgroundColor: "green",  // Cor do botão de buscar
-    padding: 10,
-    borderRadius: 5,
+    backgroundColor: "green",  // Cor de fundo verde para o botão
+    padding: 10,  // Padding de 10 dentro do botão
+    borderRadius: 5,  // Bordas arredondadas de 5 pixels
   },
+
+  // Estilo para o texto do botão de busca
   searchButtonText: {
-    color: "#fff",  // Cor do texto no botão de buscar
-    fontWeight: "bold",
+    color: "#fff",  // Cor do texto do botão de busca em branco
+    fontWeight: "bold",  // Torna o texto em negrito
   },
+
+  // Estilo para o subtítulo na tela (como "Comandas Abertas")
   subTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginVertical: 10,
+    fontSize: 16,  // Tamanho da fonte de 16
+    fontWeight: "bold",  // Torna o subtítulo em negrito
+    marginVertical: 10,  // Adiciona uma margem vertical de 10 pixels
   },
+
+  // Estilo para os cartões que exibem as comandas
   card: {
-    backgroundColor: "#fff",  // Cor de fundo do cartão
-    padding: 15,
-    borderRadius: 5,
-    marginVertical: 5,  // Espaçamento entre os cartões
-    shadowColor: "#000",  // Sombra do cartão
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
+    backgroundColor: "#fff",  // Cor de fundo branca para os cartões
+    padding: 15,  // Padding de 15 dentro de cada cartão
+    borderRadius: 5,  // Bordas arredondadas de 5 pixels para os cartões
+    marginVertical: 5,  // Margem vertical de 5 pixels entre os cartões
+    shadowColor: "#000",  // Cor da sombra (preto)
+    shadowOpacity: 0.1,  // Opacidade da sombra
+    shadowRadius: 5,  // Raio da sombra
   },
+
+  // Estilo para o nome do cliente no cartão
   clientName: {
-    fontSize: 16,
-    fontWeight: "bold",
+    fontSize: 16,  // Tamanho da fonte de 16
+    fontWeight: "bold",  // Torna o nome do cliente em negrito
   },
+
+  // Estilo para o serviço e o preço no cartão
   service: {
-    color: "green",  // Cor verde para o serviço
-    marginBottom: 5,
+    color: "green",  // Cor do texto em verde para o serviço
+    marginBottom: 5,  // Margem inferior de 5 pixels entre o texto do serviço e outros elementos
   },
+
+  // Estilo para a data da comanda
   date: {
-    color: "gray",  // Cor cinza para a data
+    color: "gray",  // Cor do texto em cinza para a data
   },
+
+  // Estilo para o horário da comanda
   time: {
-    fontSize: 14,
-    marginVertical: 5,
+    fontSize: 14,  // Tamanho da fonte de 14
+    marginVertical: 5,  // Margem vertical de 5 pixels entre o horário e outros elementos
   },
+
+  // Estilo para o botão de finalizar a comanda
   finalizeButton: {
-    backgroundColor: "#001F3F",  // Cor de fundo do botão de finalizar
-    padding: 10,
-    borderRadius: 5,
-    alignItems: "center",
+    backgroundColor: "#001F3F",  // Cor de fundo do botão de finalizar (azul escuro)
+    padding: 10,  // Padding de 10 dentro do botão
+    borderRadius: 5,  // Bordas arredondadas de 5 pixels para o botão
+    alignItems: "center",  // Alinha o texto do botão no centro
   },
+
+  // Estilo para o texto dentro do botão de finalizar
   finalizeButtonText: {
-    color: "#fff",  // Cor do texto do botão de finalizar
-    fontWeight: "bold",
+    color: "#fff",  // Cor do texto do botão em branco
+    fontWeight: "bold",  // Torna o texto do botão em negrito
   },
-  // Estilos do menu inferior fixo
+
+  // Estilo para o menu inferior fixo
   bottomNav: {
-    position: "absolute",  // Fixa o menu na parte inferior da tela
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: "#001F3F",  // Cor de fundo do menu inferior
-    flexDirection: "row",  // Organiza os ícones lado a lado
-    justifyContent: "space-around",
-    paddingVertical: 5,
-    paddingBottom: 5,
+    position: "absolute",  // Posiciona o menu de forma absoluta na tela
+    bottom: 0,  // Fixa o menu no fundo da tela
+    left: 0,  // Alinha o menu à esquerda
+    right: 0,  // Alinha o menu à direita
+    backgroundColor: "#001F3F",  // Cor de fundo azul escuro para o menu inferior
+    flexDirection: "row",  // Organiza os ícones do menu na horizontal
+    justifyContent: "space-around",  // Distribui os ícones igualmente ao longo da linha
+    paddingVertical: 5,  // Padding de 5 no topo e fundo do menu
+    paddingBottom: 5,  // Padding adicional no fundo do menu
   },
+
+  // Estilo para os botões dentro do menu inferior
   navButton: {
-    padding: 10,  // Espaçamento dentro de cada botão do menu
+    padding: 10,  // Padding de 10 dentro de cada botão do menu inferior
   },
 });
