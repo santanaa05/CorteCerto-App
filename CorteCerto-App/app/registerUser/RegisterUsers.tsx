@@ -122,7 +122,7 @@ const RegisterScreen = () => {
         Já tenho uma conta.{" "}
         <Text
           style={styles.link}
-          onPress={() => router.push("/login/LoginScreen")} // Navega para a tela de login
+          onPress={() => router.push("/login/SingInProfissional")} // Navega para a tela de login
         >
           Acessar agora!
         </Text>

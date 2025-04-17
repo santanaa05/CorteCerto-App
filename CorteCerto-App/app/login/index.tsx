@@ -21,7 +21,7 @@ const LoginScreen: React.FC = () => {
       <Text style={styles.subtitle}>Agende online, confira preços, receba notificações e muito mais...</Text>
       
       {/* Botão para continuar com e-mail ou telefone */}
-      <TouchableOpacity style={styles.button} onPress={() => router.push("/login/LoginScreen")}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push("/login/SignInUser")}>
         <Text style={styles.buttonText}>Continuar com email ou telefone</Text>
       </TouchableOpacity>
       
@@ -36,7 +36,7 @@ const LoginScreen: React.FC = () => {
       </TouchableOpacity>
       
       {/* Botão para registrar um novo cadastro */}
-      <TouchableOpacity onPress={() => router.push("../register/RegisterScreen")}>
+      <TouchableOpacity onPress={() => router.push("../registerUser/RegisterUsers")}>
         <Text style={styles.registerText}>Novo cadastro</Text>
       </TouchableOpacity>
     </View>

@@ -5,7 +5,7 @@ import { useRouter } from "expo-router"; // Importação do expo-router
 import { Ionicons } from "@expo/vector-icons"; // Importa os ícones da biblioteca Ionicons
 
 // Componente funcional para a tela de login
-export default function SingIn() {
+export default function SingInPro() {
   const router = useRouter(); // Importação do expo-router
   return (
     <View style={styles.container}>
@@ -33,12 +33,12 @@ export default function SingIn() {
       </TouchableOpacity>
 
       {/* Link para criação de conta */}
-      <TouchableOpacity onPress={() => router.push("/register/RegisterProfissional")}>
+      <TouchableOpacity onPress={() => router.push("../register/RegisterProfissional")}>
         <Text style={styles.linkText}>Novo cadastro</Text>
       </TouchableOpacity>
 
       {/* Link para recuperação de senha */}
-      <TouchableOpacity onPress={() => router.push("/login/RecuperarSenhaProfissional")}>
+      <TouchableOpacity onPress={() => router.push("../RecuperarSenha/RecuperarSenhaProfissional")}>
         <Text style={styles.linkText}>Recuperar senha</Text>
       </TouchableOpacity>
     </View>
