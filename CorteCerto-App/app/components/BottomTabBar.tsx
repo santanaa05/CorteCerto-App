@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'; // Ícones utilizados na barra
 
 // Componente que representa a barra de navegação inferior fixa
-export function BottomTabBar() {
+export default function BottomTabBar() {
   return (
     // Container da barra de navegação
     <View style={styles.tabContainer}>

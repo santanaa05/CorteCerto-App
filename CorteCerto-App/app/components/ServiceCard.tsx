@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import { FontAwesome, Feather } from '@expo/vector-icons'; // Ícones da Expo
 
 // Componente funcional que representa um cartão de serviço
-export function ServiceCard() {
+export default function ServiceCard() {
   return (
     // Container principal do cartão
     <View style={styles.card}>
