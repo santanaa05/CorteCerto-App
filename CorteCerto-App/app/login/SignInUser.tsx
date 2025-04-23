@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1, // O input ocupa todo o espaço disponível dentro do container
-    height: 50, // Define a altura do campo de entrada
+    height: 45, // Define a altura do campo de entrada
   },
   button: {
     width: "100%", // O botão ocupa toda a largura disponível

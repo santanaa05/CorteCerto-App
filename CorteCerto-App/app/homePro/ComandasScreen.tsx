@@ -205,14 +205,12 @@ const styles = StyleSheet.create({
 
   // Estilo para os cartões que exibem as comandas
   card: {
-    backgroundColor: "#fff",  // Cor de fundo branca para os cartões
-    padding: 15,  // Padding de 15 dentro de cada cartão
-    borderRadius: 5,  // Bordas arredondadas de 5 pixels para os cartões
-    marginVertical: 5,  // Margem vertical de 5 pixels entre os cartões
-    shadowColor: "#000",  // Cor da sombra (preto)
-    shadowOpacity: 0.1,  // Opacidade da sombra
-    shadowRadius: 5,  // Raio da sombra
-  },
+    backgroundColor: "#fff",
+    padding: 15,
+    borderRadius: 5,
+    marginVertical: 5,
+    boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", // novo estilo compatível com web
+  },  
 
   // Estilo para o nome do cliente no cartão
   clientName: {

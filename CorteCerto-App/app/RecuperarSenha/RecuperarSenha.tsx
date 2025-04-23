@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: "row", // Alinha os elementos na mesma linha
     alignItems: "center", // Centraliza verticalmente
-    backgroundColor: '#F0F4F8', // Cor de fundo do campo de entrada
+    backgroundColor: "#C5DDF5", // Cor de fundo do campo de entrada
     width: "100%", // Largura total
     padding: 10, // Espaçamento interno
     borderRadius: 5, // Bordas arredondadas
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#007BFF', // Cor de fundo do botão
     width: "100%", // Largura total
-    padding: 15, // Espaçamento interno
+    padding: 12, // Espaçamento interno
     borderRadius: 5, // Bordas arredondadas
     alignItems: "center", // Centraliza o texto
   },
